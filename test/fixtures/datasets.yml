@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  documentation_url: MyString
+  url: MyString
+  last_updated: 2013-01-21 14:16:58
+  contact_name: MyString
+  contact_email: MyString
+  public: false
+
+two:
+  title: MyString
+  description: MyText
+  documentation_url: MyString
+  url: MyString
+  last_updated: 2013-01-21 14:16:58
+  contact_name: MyString
+  contact_email: MyString
+  public: false
