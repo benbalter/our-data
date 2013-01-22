@@ -1,2 +1,3 @@
 web: bundle exec rails server thin -p $PORT -e $RACK_ENV
-resque: env TERM_CHILD=1 bundle exec rake jobs:work
+worker: QUEUE=* bundle exec rake resque:work
+2scheduler: bundle exec rake resque:scheduler
