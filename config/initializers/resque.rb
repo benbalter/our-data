@@ -1,1 +1,1 @@
-Resque.redis = URI.parse(ENV["REDISTOGO_URL"])
+Resque.redis = ENV["REDISTOGO_URL"]
