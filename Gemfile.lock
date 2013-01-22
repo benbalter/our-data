@@ -127,6 +127,7 @@ DEPENDENCIES
   postrank-uri
   rails (= 3.2.11)
   rails-api
+  redis
   resque
   resque-scheduler
   sqlite3

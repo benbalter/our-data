@@ -11,9 +11,10 @@ gem 'postrank-uri'
 gem 'addressable'
 gem 'json'
 gem 'acts-as-taggable-on'
-gem 'resque' 
+gem 'resque'
 gem 'resque-scheduler', :require => 'resque_scheduler'
 gem 'pg', :group => :production
+gem 'redis'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
