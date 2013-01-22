@@ -7,5 +7,7 @@ task "resque:setup" do
   require 'resque/scheduler'
 
   Resque.schedule = YAML.load_file('config/schedule.yml')
+  ENV['QUEUE'] = '*'
 
 end
+task "jobs:work" => "resque:work"
