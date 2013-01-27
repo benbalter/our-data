@@ -16,7 +16,7 @@ gem 'pg', :group => :production
 gem 'redis'
 gem 'thin'
 gem 'thumbs_up', '~> 0.5.0'
-gem 'hirefire'
+gem 'heroku-resque-workers-scaler', :git => "git://github.com/fjg/heroku-resque-workers-scaler.git"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

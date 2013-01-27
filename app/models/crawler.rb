@@ -1,4 +1,6 @@
-class Crawler
+class Crawler 
+
+  extend HerokuResqueAutoScale
 
   @queue = :crawler_queue
 
