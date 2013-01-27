@@ -17,6 +17,7 @@ gem 'pg', :group => :production
 gem 'redis'
 gem 'thin'
 gem 'thumbs_up', '~> 0.5.0'
+gem 'hirefire'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
