@@ -12,7 +12,6 @@ gem 'addressable'
 gem 'json'
 gem 'acts-as-taggable-on'
 gem 'resque'
-gem 'resque-scheduler', :require => 'resque_scheduler'
 gem 'pg', :group => :production
 gem 'redis'
 gem 'thin'

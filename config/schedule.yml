@@ -1,2 +1,0 @@
-RefreshDomainList:
-  cron: "0 0 * * *"
