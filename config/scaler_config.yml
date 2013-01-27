@@ -1,5 +1,7 @@
 thresholds:
 - :workers: 1
   :job_count: 1
+- :workers: 2
+  :job_count: 10
 environments:
   - production

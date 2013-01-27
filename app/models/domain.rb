@@ -53,11 +53,10 @@ class Domain < ActiveRecord::Base
         d.parse_json dataset
         d.save
       end
-      self.update_attribute "last_crawled", Time.now
-    rescue OpenURI::HTTPError => ex
-      return nil
-    end
+    rescue
 
+    end
+    self.update_attributes :last_crawled => Time.now
   end
   
   def as_json(options={})
