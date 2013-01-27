@@ -12,16 +12,16 @@ class DatasetsController < ApplicationController
       d = d.tagged_with( params[ tag ], :as => tag.to_sym ) unless params[tag].nil?
     end
     
-    render :json => d.where(conditions)
+    render :json => d.where(conditions), :callback => params[:callback]
     
   end
   
   def show
     @dataset = Dataset.find_by_id(params[:id])
     if @dataset
-      render :json => @dataset
+      render :json => @dataset, :callback => params[:callback]
     else
-      render :json => { :status => "Error", :message => "Could not find dataset with id=#{params[:id]}."}, :status => 404
+      render :json => { :status => "Error", :message => "Could not find dataset with id=#{params[:id]}."}, :status => 404, :callback => params[:callback]
     end
   end
 

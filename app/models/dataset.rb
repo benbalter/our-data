@@ -7,6 +7,8 @@ class Dataset < ActiveRecord::Base
   validates_presence_of :agency_id, :title, :url
   validates_uniqueness_of :url
   validates_uniqueness_of :title, :scope => :agency_id
+  
+  acts_as_voteable
 
   $map = {  "title"          => "title", 
             "description"    => "description", 
@@ -26,6 +28,7 @@ class Dataset < ActiveRecord::Base
     json["organization"] = self.agency.name
     json["keywords"] = self.tag_list.to_s
     json["format"] = self.format_list.to_s
+    json["score"] = self.score
     json
   end
     
@@ -41,7 +44,6 @@ class Dataset < ActiveRecord::Base
   
   def test_json
     { title: "test", description: "test description", dataDictionary: "http://foo.gov/data", accessURL: "http://foo.gov/dataset", format: "json", keywords: "foo, bar, test", modified: "", organization: "Federal Communications Commission", person: "Uncle Sam", mbox: "sam@fcc.gov", public: true }.to_json
-    
   end
   
 end
